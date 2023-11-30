@@ -111,3 +111,64 @@ class ProductDetailsPage extends StatelessWidget {
 }
 
 
+class BuyNowPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Buy Now'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text('Choose Payment Method'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                PaymentButton(imagePath: 'assets/bKash.png',),
+                PaymentButton(imagePath: 'assets/Rocket.png'),
+                PaymentButton(imagePath: 'assets/Nagad.png'),
+                /*PaymentButton(imagePath: 'mastercard_image_path'),
+                PaymentButton(imagePath: 'amex_image_path'),*/
+              ],
+            ),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Bkash'),
+                Gap(21),
+                Text('Rocket'),
+                Gap(21),
+                Text('Nagad'),
+              ],
+            ),
+            SizedBox(height: 20),
+            DropdownButton<String>(
+              items: ['Bkash', 'Rocket', 'Nagad']
+                  .map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                // Do something with the selected value
+              },
+              hint: Text('Select an option'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('Go Back'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
