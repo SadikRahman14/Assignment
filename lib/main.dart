@@ -31,7 +31,7 @@ class ProductDetailsPage extends StatelessWidget {
       body:
         Center(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
            children: [
             Center(
               child: Column(
@@ -117,6 +117,32 @@ class ProductDetailsPage extends StatelessWidget {
           ),
         ),
 
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 1,
+        backgroundColor: Colors.blueGrey,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            backgroundColor: Colors.blueGrey,
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              backgroundColor: Colors.blueGrey,
+              label: "Profile",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            backgroundColor: Colors.blueGrey,
+            label: "Search",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add),
+            backgroundColor: Colors.blueGrey,
+            label: "Add",
+          )
+        ],
+      ),
       );
 
   }
@@ -145,24 +171,34 @@ class BuyNowPage extends StatelessWidget {
 
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 PaymentButton(imagePath: 'assets/bKash.png',),
-                Gap(12),
-                PaymentButton(imagePath: 'assets/Rocket.png'),
-                PaymentButton(imagePath: 'assets/Nagad.png'),
+                Gap(15),
                 PaymentButton(imagePath: 'assets/masterCard.png',),
-                /*PaymentButton(imagePath: 'amex_image_path'),*/
+                Gap(15),
+                PaymentButton(imagePath: 'assets/Rocket.png'),
+                Gap(15),
+                PaymentButton(imagePath: 'assets/Nagad.png'),
               ],
             ),
             Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+                children: [
+
                 Text(
                     'Bkash',
                     style: TextStyle(
                       color: Colors.white,
                     ),
+
+                ),
+                Gap(21),
+                Text(
+                  'MasterCard',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
 
                 ),
                 Gap(21),
@@ -185,7 +221,7 @@ class BuyNowPage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             DropdownButton<String>(
-              items: ['Bkash', 'Rocket', 'Nagad']
+              items: ['Bkash','MasterCard', 'Rocket', 'Nagad']
                   .map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -234,4 +270,3 @@ class PaymentButton extends StatelessWidget {
     );
   }
 }
-
