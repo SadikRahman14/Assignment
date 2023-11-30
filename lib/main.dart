@@ -263,7 +263,7 @@ class BuyNowPage extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text('Go Back'),
+              child: Text('Go Back to HOME'),
             ),
           ],
         ),
