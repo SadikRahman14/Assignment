@@ -148,10 +148,11 @@ class BuyNowPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 PaymentButton(imagePath: 'assets/bKash.png',),
+                Gap(12),
                 PaymentButton(imagePath: 'assets/Rocket.png'),
                 PaymentButton(imagePath: 'assets/Nagad.png'),
-                /*PaymentButton(imagePath: 'mastercard_image_path'),
-                PaymentButton(imagePath: 'amex_image_path'),*/
+                PaymentButton(imagePath: 'assets/masterCard.png',),
+                /*PaymentButton(imagePath: 'amex_image_path'),*/
               ],
             ),
             Row(
