@@ -26,7 +26,7 @@ class ProductDetailsPage extends StatelessWidget {
       backgroundColor: Colors.grey[600],
       appBar: AppBar(
         backgroundColor: Colors.grey[900],
-        title: Center(child: Text('Product Details')),
+        title: Center(child: Text('Football Options')),
       ),
       body:
         Center(
@@ -38,13 +38,19 @@ class ProductDetailsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('Al-Rihal Addidas'),
+                  Text(
+                    'Al-Rihal 2022 Addidas',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   Image.asset(
                       'assets/Ball-2.jpg',
                         height: 150.0,
-                        width: 150.0,
+                        width: 100.0,
                   ),
                   Text('Price : 1950 Tk.'),
+                  Gap(10),
                   Text('Used in World Cup 2022'),
                   SizedBox(height: 20),
                   ElevatedButton(
@@ -64,14 +70,20 @@ class ProductDetailsPage extends StatelessWidget {
                mainAxisAlignment: MainAxisAlignment.center,
                crossAxisAlignment: CrossAxisAlignment.center,
                children: [
-                 Text('Product Name'),
+                 Text(
+                   'Ball-2016',
+                   style: TextStyle(
+                     fontWeight: FontWeight.bold,
+                   ),
+                 ),
                  Image.asset(
                    'assets/Ball-3.jpg',
                    height: 150.0,
-                   width: 150.0,
+                   width: 120.0,
                  ),
-                 Text('Product Price'),
-                 Text('Product feature description'),
+                 Text('1500 Tk'),
+                 Gap(10),
+                 Text('Used in Euro 2016'),
                  SizedBox(height: 20),
                  ElevatedButton(
                    onPressed: () {
@@ -89,14 +101,21 @@ class ProductDetailsPage extends StatelessWidget {
                mainAxisAlignment: MainAxisAlignment.center,
                crossAxisAlignment: CrossAxisAlignment.center,
                children: [
-                 Text('Product Name'),
+                 Text(
+                     'Jabulani-2010 Addidas',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                 ),
                  Gap(10.0),
                  Image.asset(
                      'assets/Ball-1.jpg',
-                      height: 150.0,
-                      width: 150.0,
+                      height: 130.0,
+                      width: 120.0,
                  ),
-                 Text('Product Price'),
+                 Gap(10.0),
+                 Text('1000 Tk.'),
+                 Gap(10.0),
                  Text('Product feature description'),
                  SizedBox(height: 20),
                  ElevatedButton(
@@ -244,7 +263,7 @@ class BuyNowPage extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text('Go Back'),
+              child: Text('Go Back to HOME'),
             ),
           ],
         ),
